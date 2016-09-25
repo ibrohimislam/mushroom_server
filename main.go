@@ -94,7 +94,7 @@ func main() {
 		panic("DB Connection Error: " + err.Error())
 	}
 
-	fmt.Println("[INFO] Server started." + string(jsonString))
+	fmt.Println("[INFO] Server started.")
 
 	http.HandleFunc("/smsgateway", func(w http.ResponseWriter, req *http.Request) {
 		s := websocket.Server{Handler: websocket.Handler(webHandler)}
